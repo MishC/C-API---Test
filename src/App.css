@@ -1,9 +1,9 @@
 .App {
-  text-align: center;
+  text-align: left;
 }
 .App ul {margin:20px 0;}
 
-.App-header {
+.App {
   padding: 20px;
   background-color: #282c34;
   min-height: 100vh;
@@ -60,11 +60,10 @@
   outline: 0;
 }
 
-.App header {
-  text-align: left;
-}
 
-.App header h2 {
+  
+
+.App  h2 {
   margin: 40px;
 }
 .App div.buttons{margin: 20px 0px;}

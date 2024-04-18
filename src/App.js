@@ -100,7 +100,8 @@ console.log(isClicked);
 
   return (
     <div className="App">
-      <header className="App-header">
+      <header className="App-header">      </header>
+
         <div>
           <h2>Items</h2>
           <ul>
@@ -160,7 +161,6 @@ console.log(isClicked);
 </div>
 
 
-      </header>
     </div>
   );
 }
