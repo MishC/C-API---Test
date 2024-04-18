@@ -1,33 +1,161 @@
-import './App.css';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect, Component } from 'react';
 import axios from 'axios';
+import './App.css';
+
+import Remove from "./Components/Remove"
+
 
 
 function App() {
-  const [items,setItems]=useState([]);
-  const fetchItems=async ()=>{
-    try{const response=await axios.get("http://localhost:5211/Item");
-  setItems(response?.data);
-  console.log(response.data);
-  console.log(items);
-  } 
+  const [items, setItems] = useState([]);
+  const [Id, setId] = useState(0);
+  const [description, setDescription]=useState("");
+  const [name, setName]=useState("");
 
-  catch(error){console.error("Unable to connect to the backend")}; };
+  const [isClicked, setIsClicked] = useState(false);
 
-  useEffect(()=>{fetchItems()},[])
+
+
+
+  const fetchItems = async () => {
+    try {
+      const response = await axios.get("http://localhost:5211/Item");
+      setItems(response.data);
+      console.log(response.data);
+    } catch(error) {
+      console.error("Unable to connect to the backend:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchItems();
+  }, []);
+
+
+  const changeId = (event) => {
+    const value=event.target.value;
+    if (value === 0  || /^[0-9]*[1-9][0-9]*$/.test(value)) {
+      setId(value);
+    }
+  };
+  const changeDescription= (event) => {
+    const value=event.target.value;
+    
+      setDescription(value);
+    }
+
+    const changeName= (event) => {
+      const value=event.target.value;
+      
+        setName(value);
+      }
+    const handleAddItem = async () => {
+      try {
+        const response = await axios.post("http://localhost:5211/Item", {
+          id: Id, name: name, description: description
+        });
+        console.log("Data sent successfully:", response.data);
+        fetchItems();
+
+      setId(0);
+      setName("");
+      setDescription("");
+      } catch(error) {
+        console.error("Error while sending data to the server:", error);
+      }
+    };
+     
+      
+  
+  
+  const removeButtonClick = async(id) => {
+    try {
+      const response = await axios.delete(`http://localhost:5211/Item/${id}`);
+      console.log("Item removed successfully:", response.data);
+      fetchItems();
+      setId(0);
+    } catch(error) {
+      console.error("Error while removing item:", error);
+    }
+  };
+
+ const AddItemonClick=() => {
+setIsClicked(true);
+console.log(isClicked);
+};
+  const handleButtonClick = async () => {
+    try {
+      const response = await axios.post("http://localhost:5211/Item", {
+      });
+      console.log("Data sent successfully:", response.data);
+    } catch(error) {
+      console.error("Error while sending data to the server:", error);
+    }
+  };
 
 
 
   return (
-
     <div className="App">
       <header className="App-header">
-    <div>
-<h2>Elements</h2>      
-      <ul> {items.map(item=>(<li key={item.id}>{item.id}. {item.name}:{item.description}</li>))} </ul> 
-    
+        <div>
+          <h2>Elements</h2>
+          <ul>
+            {items.map(item => (
+              <li key={item.id}>
+                {item.id}. {item.name}: {item.description}
+              </li>
+            ))}
+          </ul>
+          
+          
+        </div>
+        
+          <div>
+          <button onClick={AddItemonClick} role="button">Add Item</button></div>
+          {isClicked&&<div>
+         <div>   <label htmlFor="userId">Add Id:</label>
+      <input
+        type="number"
+        id="userId"
+        value={Id}
+        onChange={changeId}
+      />
+      </div>
+      <div>   <label htmlFor="userId">Add Name:</label>
+      <input
+        type="text"
+        id="name"
+        value={name}
+        onChange={changeName}
+      />
+      </div>
+      <div>   <label htmlFor="userId">Add Description:</label>
+      <input
+        type="text"
+        id="description"
+        value={description}
+        onChange={changeDescription}
+      />
+      </div>
+      <button onClick={handleAddItem} role="button">Create Item</button>
+            </div>}
+        <div>
+          <label htmlFor="userId">Remove Id:</label>
+      <input
+        type="number"
+        id="userId"
+        name="userId"
+        onChange={changeId}
+      />
+      
+      <button className="button-13" onClick={() => removeButtonClick(Id)} role="button">Remove</button>
 
-    </div>
+
+
+</div>
+
+
       </header>
     </div>
   );

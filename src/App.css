@@ -2,15 +2,8 @@
   text-align: center;
 }
 
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  padding:20px;
+  padding: 20px;
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -21,20 +14,55 @@
   color: white;
 }
 
-header {text-align: left;}
-header h2 {margin:20px;}
-ul {text-align: left; margin:0px;} 
-li {list-style: none;margin:0px;}
-
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Updatovaný styl pro tlačítka */
+.App button {
+  position: relative;
+  left: 20px;
+  text-align: left; /* Přidáno pro přepsání text-align: center; z .App */
+}
+
+.App .button-13 {
+  background-color: #fff;
+  border: 1px solid #d5d9d9;
+  border-radius: 8px;
+  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  box-sizing: border-box;
+  color: #0f1111;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Amazon Ember", sans-serif;
+  font-size: 13px;
+  line-height: 29px;
+  padding: 0 10px 0 11px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: 100px;
+  position: relative;
+  left: 20px;
+}
+
+.App .button-13:hover {
+  background-color: #f7fafa;
+}
+
+.App .button-13:focus {
+  border-color: #008296;
+  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  outline: 0;
+}
+
+.App header {
+  text-align: left;
+}
+
+.App header h2 {
+  margin: 20px;
 }

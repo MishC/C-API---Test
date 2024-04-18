@@ -64,3 +64,4 @@ D:\documents\GA\OOP_C#NET\clientside\DinAPI\obj\Debug\net8.0\refint\DinAPI.dll
 D:\documents\GA\OOP_C#NET\clientside\DinAPI\obj\Debug\net8.0\DinAPI.pdb
 D:\documents\GA\OOP_C#NET\clientside\DinAPI\obj\Debug\net8.0\DinAPI.genruntimeconfig.cache
 D:\documents\GA\OOP_C#NET\clientside\DinAPI\obj\Debug\net8.0\ref\DinAPI.dll
+D:\documents\GA\OOP_C#NET\clientside\DinAPI\obj\Debug\net8.0\DinAPI.sourcelink.json
