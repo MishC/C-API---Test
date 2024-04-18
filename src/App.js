@@ -114,9 +114,10 @@ console.log(isClicked);
           
         </div>
         
-          <div>
-          <button onClick={AddItemonClick} role="button">Add Item</button></div>
-          {isClicked&&<div>
+        <div className="buttons">
+          <button className="button-13" onClick={AddItemonClick} role="button">Add Item</button></div>
+          {isClicked&& <div> 
+
          <div>   <label htmlFor="userId">Add Id:</label>
       <input
         type="number"
@@ -143,7 +144,7 @@ console.log(isClicked);
       </div>
       <button onClick={handleAddItem} role="button">Create Item</button>
             </div>}
-        <div>
+        <div className="buttons"> 
           <label htmlFor="userId">Remove Id:</label>
       <input
         type="number"
