@@ -102,7 +102,7 @@ console.log(isClicked);
     <div className="App">
       <header className="App-header">
         <div>
-          <h2>Elements</h2>
+          <h2>Items</h2>
           <ul>
             {items.map(item => (
               <li key={item.id}>
