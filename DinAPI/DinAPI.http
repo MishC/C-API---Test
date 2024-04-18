@@ -1,0 +1,6 @@
+@DinAPI_HostAddress = http://localhost:5211
+
+GET {{DinAPI_HostAddress}}
+Accept: application/json
+
+###
