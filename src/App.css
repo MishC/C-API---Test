@@ -1,5 +1,5 @@
 .App {
-  text-align: left;
+  text-align: center;
 }
 .App ul {margin:20px 0;}
 
@@ -22,8 +22,8 @@
 /* Updatovaný styl pro tlačítka */
 .App button {
   position: relative;
-  left: 20px;
-  text-align: left; /* Přidáno pro přepsání text-align: center; z .App */
+  /*left: 20px;
+  text-align: left;  Přidáno pro přepsání text-align: center; z .App */
 }
 
 .App .button-13 {
@@ -66,4 +66,20 @@
 .App  h2 {
   margin: 40px;
 }
-.App div.buttons{margin: 20px 0px;}
+.App input[type="text"] {width:30vw; }
+.App input#description {height:10vh;}
+.App div.buttons{width:100%; margin: 20px auto;}
+.App div.addProperty {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  justify-content: space-between;
+}
+
+div.userId,
+div.name,
+div.description {
+  display: flex;
+  justify-content: space-between;
+}
+

@@ -118,8 +118,8 @@ console.log(isClicked);
         <div className="buttons">
           <button className="button-13" onClick={AddItemonClick} role="button">Add Item</button></div>
           {isClicked&& <div> 
-
-         <div>   <label htmlFor="userId">Add Id:</label>
+<div className="addProperty">
+         <div className="userId">   <label htmlFor="userId">Id:</label>
       <input
         type="number"
         id="userId"
@@ -127,23 +127,26 @@ console.log(isClicked);
         onChange={changeId}
       />
       </div>
-      <div>   <label htmlFor="userId">Add Name:</label>
+      <div className="name">   <label htmlFor="name">Name:</label>
       <input
         type="text"
         id="name"
         value={name}
+        width={100}
         onChange={changeName}
       />
       </div>
-      <div>   <label htmlFor="userId">Add Description:</label>
+      <div className="description">   <label htmlFor="description">Description:</label>
       <input
         type="text"
         id="description"
         value={description}
         onChange={changeDescription}
       />
-      </div>
-      <button onClick={handleAddItem} role="button">Create Item</button>
+      </div></div>
+      <div className="buttons"> 
+
+      <button className="button-13" onClick={handleAddItem} role="button">Create Item</button></div>
             </div>}
         <div className="buttons"> 
           <label htmlFor="userId">Remove Id:</label>
