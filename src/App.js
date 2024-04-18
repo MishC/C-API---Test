@@ -20,8 +20,11 @@ function App() {
   const fetchItems = async () => {
     try {
       const response = await axios.get("http://localhost:5211/Item");
-      setItems(response.data);
+
+      const sortedItems = [...response.data].sort((a, b) => a.id - b.id);
+
       console.log(response.data);
+      setItems(sortedItems);
     } catch(error) {
       console.error("Unable to connect to the backend:", error);
     }
