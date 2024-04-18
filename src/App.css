@@ -46,8 +46,6 @@
   touch-action: manipulation;
   vertical-align: middle;
   width: 100px;
-  position: relative;
-  left: 20px;
 }
 
 .App .button-13:hover {
@@ -60,12 +58,9 @@
   outline: 0;
 }
 
-
+.App .button-13.remove {position:relative; left:30px;}
   
 
-.App  h2 {
-  margin: 40px;
-}
 .App input[type="text"] {width:30vw; }
 .App input#description {height:10vh;}
 .App div.buttons{width:100%; margin: 20px auto;}

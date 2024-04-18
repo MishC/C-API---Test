@@ -157,7 +157,7 @@ console.log(isClicked);
         onChange={changeId}
       />
       
-      <button className="button-13" onClick={() => removeButtonClick(Id)} role="button">Remove</button>
+      <button className="button-13 remove" onClick={() => removeButtonClick(Id)} role="button">Remove</button>
 
 
 
