@@ -15,7 +15,7 @@ function AddItem({ fetchItems, items }) {
     const value=event.target.value;
      const idInItems=items.some(item=>item.id==value);
      setIdUsed(idInItems);
-    if (/^[1-9]*[1-9][0-9]*$/.test(value) ) {
+    if (/^[1-9]?[0-9]*$/.test(value) ) {
       setId(value);
     }
   };
