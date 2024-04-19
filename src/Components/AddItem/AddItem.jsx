@@ -4,7 +4,7 @@ import axios from 'axios';
 import "./AddItem.css";
 
 function AddItem({ fetchItems, items }) {
-  const [Id, setId] = useState(0);
+  const [Id, setId] = useState(1);
   const [description, setDescription] = useState("");
   const [name, setName] = useState("");
   const [isClicked,setIsClicked]= useState("");
@@ -15,7 +15,7 @@ function AddItem({ fetchItems, items }) {
     const value=event.target.value;
      const idInItems=items.some(item=>item.id==value);
      setIdUsed(idInItems);
-    if (/^[0-9]*[1-9][0-9]*$/.test(value) ) {
+    if (/^[1-9]*[1-9][0-9]*$/.test(value) ) {
       setId(value);
     }
   };
