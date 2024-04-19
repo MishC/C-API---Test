@@ -72,13 +72,13 @@
   text-align: right;
   justify-content: space-between;
 }
-
-.App div.userId,
+.App div.userId 
 div.name,
 div.description {
   display: flex;
   justify-content: space-between;
   vertical-align: baseline;
 }
-.App label {margin-right:10px;}
+
+.App label {margin-right:20px;}
 .warning {color:red;}

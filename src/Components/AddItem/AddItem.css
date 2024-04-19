@@ -1,3 +1,4 @@
+.addProperty{margin:40px 120px 40px 0;}
 input[type="text"] {width:30vw; }
 input#description {height:10vh;}
 div.buttons{width:100%; margin: 20px auto;}
@@ -6,10 +7,15 @@ div.addItem {
   flex-direction: column;
   text-align: right;
   justify-content: space-between;
+  justify-items: flex-start;
+  align-items:baseline;
 }
+
  div.userId,
 div.name,
 div.description {
-  display: flex;
-  justify-content: space-between;
+    display:grid;
+    grid-template-columns: 30vw 30vw;
+  grid-gap: 10px;
 }
+

@@ -1,6 +1,6 @@
-// RemoveItem.js
 import React, { useState } from 'react';
 import axios from 'axios';
+import "./RemoveItem.css";
 
 function RemoveItem({ fetchItems }) {
   const [Id, setId] = useState(0);
