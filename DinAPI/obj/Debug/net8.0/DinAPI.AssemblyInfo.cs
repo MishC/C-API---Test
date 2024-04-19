@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DinAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+207cab8001d8f2e4946955ee23e7c866ad523e7e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+54d69c4cc999565a3d0b763a80b385b48efa25ac")]
 [assembly: System.Reflection.AssemblyProductAttribute("DinAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DinAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

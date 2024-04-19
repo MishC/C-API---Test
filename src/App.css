@@ -62,6 +62,8 @@
   
 
 .App input[type="text"] {width:30vw; }
+.App input[type="number"] {width:5vw; }
+
 .App input#description {height:10vh;}
 .App div.buttons{width:100%; margin: 20px auto;}
 .App div.addProperty {
@@ -71,10 +73,12 @@
   justify-content: space-between;
 }
 
-div.userId,
+.App div.userId,
 div.name,
 div.description {
   display: flex;
   justify-content: space-between;
+  vertical-align: baseline;
 }
-
+.App label {margin-right:10px;}
+.warning {color:red;}
